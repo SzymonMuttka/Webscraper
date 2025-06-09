@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: '21278'
+      MONGO_INITDB_ROOT_PASSWORD: '04291006312'
+      MONGO_INITDB_DATABASE: PRIR
+
+  gui:
+    build:
+      context: ./gui
+    container_name: gui
+    ports:
+      - "5000:5000"
+    depends_on:
+      - engine
+    environment:
+      MONGO_URI: mongodb+srv://21278:04291006312@mongodb21278.94q2jcy.mongodb.net/PRIR
+
+  engine:
+    build:
+      context: ./engine
+    container_name: engine
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb+srv://21278:04291006312@mongodb21278.94q2jcy.mongodb.net/PRIR
+
+volumes:
+  mongo_data:
