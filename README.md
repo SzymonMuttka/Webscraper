@@ -32,8 +32,9 @@ Aplikacja rozproszona do pobierania danych z witryn internetowych, z graficznym 
 docker compose up --build
 
 (GUI będzie dostępne pod adresem: http://localhost:5000)
+
 (MongoDB działa domyślnie na porcie 27017)
 
 ---
 
-🧠 Autor: Szymon Muttka 21278
+## 🧠 Autor: Szymon Muttka 21278
