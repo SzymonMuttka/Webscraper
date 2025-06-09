@@ -39,4 +39,5 @@ docker compose up --build
 
 ## 🧠 Autorzy:
 Szymon Muttka 21278
+
 Michał Mazurek 21265
