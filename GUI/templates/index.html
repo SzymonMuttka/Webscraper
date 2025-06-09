@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Webscraper</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <header class='header'><h1>Webscraper</h1></header>
+
+  <form method="POST" class='linkToScrape'>
+    <input class='URLinput' name='url' placeholder="Wpisz URL do przeszukania..." required>
+    <button class='URLbutton' type="submit">Przeszukaj</button>
+  </form>
+
+  <div class='previouslyScraped'>
+    <h2 class='previouslyScrapedH2'>Poprzednio przeszukane:</h2>
+
+    {% for result in results %}
+      <div class='Result'>
+        <h3 class='ResultH3'>URL: {{ result.url }}</h3>
+        <p class='ResultTitle'>Tytuł: {{ result.title }}</p>
+
+        <p class='ResultP'>Nagłówki:</p>
+        <ul class='ResultUL'>
+          {% for header in result.headers %}
+            <li class='ResultLI'>{{ header }}</li>
+          {% endfor %}
+        </ul>
+
+        <p class='ResultP'>Linki:</p>
+        <ul class='ResultUL'>
+          {% for link in result.links %}
+            <li class='ResultLI'><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <p class='ResultP'>Maile:</p>
+        <ul class='ResultUL'>
+          {% for email in result.emails %}
+            <li>{{ email }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+  <hr />
+  <footer>Autor: Szymon Muttka 21278</footer>
+</body>
+</html>

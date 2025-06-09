@@ -1,0 +1,125 @@
+body
+{
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header
+{
+  background-color: #4a90e2;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.linkToScrape
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  gap: 1rem;
+}
+
+.URLinput
+{
+  width: 50%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.URLbutton
+{
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.URLbutton:hover
+{
+  background-color: #357ab8;
+}
+
+.previouslyScraped
+{
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  padding: 1rem;
+}
+
+.previouslyScrapedH2
+{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.Result
+{
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgb(207, 207, 207);
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.Result:hover
+{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ResultH3
+{
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.ResultTitle
+{
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.ResultP
+{
+  margin: 1rem 0 0.4rem 0;
+  font-weight: bold;
+}
+
+.ResultUL
+{
+  list-style-type: disc;
+  margin: 0 0 0.8rem 1.5rem;
+  padding: 0;
+}
+
+.ResultLI a
+{
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.ResultLI a:hover
+{
+  text-decoration: underline;
+}
+
+footer
+{
+  text-align: center;
+  padding: 1rem;
+  background-color: #f2f2f7;
+}
